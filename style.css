@@ -18,8 +18,12 @@ font-family:  "Comic Sans MS", "Comic Sans", cursive;
 font-family:  "Comic Sans MS", "Comic Sans", cursive;
 }
 
+#math3-answer {
+font-family:  "Comic Sans MS", "Comic Sans", cursive;
+}
+
 #math1-result {
-  background: rgb(244, 98, 181);
+  background: rgb(229, 255, 229);
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
@@ -28,13 +32,26 @@ font-family:  "Comic Sans MS", "Comic Sans", cursive;
 }
 
 #math2-result {
-  background: rgb(196, 159, 255);
+  background: rgb(229, 255, 229);
   border: 5px solid black;
   font-size: 24px;
   min-height: 160px;
   margin-top: 10px;
   margin-bottom: 20px;
+}
 
+#math3-result {
+  background: rgb(229, 255, 229);
+  border: 5px solid black;
+  font-size: 24px;
+  min-height: 160px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+body {
+  background-image: url("https://static.wikia.nocookie.net/baldis-basics-in-education-and-learning/images/5/5c/MapPad_3_TestSprite.png/revision/latest?cb=20241203041256");
+}
 
 hr {
   height: 5px;
