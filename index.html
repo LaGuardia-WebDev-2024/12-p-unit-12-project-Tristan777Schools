@@ -1,9 +1,9 @@
 <!-- Unit 12 Project
 Requirements
 [x] Two Interactive Drop-down Inputs 
-[  ] Standard Animation
-[  ] Custom Animation
-[1/3] Include Three Images
+[x] Standard Animation
+[x] Custom Animation
+[3/3] Include Three Images
 
 Select ONE Additional Feature to Add  
 [ no ] Feature 1 - Google Font
@@ -38,6 +38,8 @@ Select ONE Additional Feature to Add
     </form>
     <div id="math1-result">
       <p id="math1-text"></p>
+      <img id="math-1">
+      <img id="math1-bad">
     </div>
     <hr />
     <!-- Math Question 2 -->
@@ -55,6 +57,8 @@ Select ONE Additional Feature to Add
     </form>
     <div id="math2-result">
       <p id="math2-text"></p>
+      <img id="math-2">
+      <img id="math2-bad">
     </div>
     <!-- Math Question 3 -->
     <form id="math3-form">
@@ -71,6 +75,7 @@ Select ONE Additional Feature to Add
     </form>
     <div id="math3-result">
       <p id="math3-text"></p>
+      <img id="math3-bad">
     </div>
     <hr />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -80,51 +85,88 @@ Select ONE Additional Feature to Add
       //========================Math Question 1 jQuery Code
       $("#math1-form").on("submit", function (event) {
         event.preventDefault();
+        $("#math1-text").hide();
+        $("#math-1").hide();
+        $("#math1-bad").hide();
 
         var $answer = $("#math1-answer");
         var answer = $answer.val();
 
         if (answer === "math13") {
           $("#math1-text").text("WOW! YOU EXIST!");
+ $("#math-1").attr("src", "https://www.freeiconspng.com/thumbs/checkmark-png/checkmark-png-5.png");
+ 
         } 
+      
         else {
           $("#math1-text").text("I GET ANGRIER FOR EVERY PROBLEM YOU GET WRONG!");
+          $("#math1-bad").attr("src", "https://static.vecteezy.com/system/resources/thumbnails/017/785/303/small/creative-wrong-icon-3d-render-png.png");
         }
+        $("#math1-text").fadeIn(500);
+        $("#math1-text").animate({
+          width: "400px",
+          marginLeft: "250px",
+          borderWidth: "300px"
+        }, 1500);
+        $("#math-1").fadeIn(500);
+        $("#math1-bad").fadeIn(500);
       });
-
-      $("#math1-form").click(function (){
-$answer.fadeIn(500);
-
-      });
+      
 
       //=======================Math Question 2 jQuery Code
       $("#math2-form").on("submit", function (event) {
         event.preventDefault();
+        $("#math2-text").hide();
+        $("#math-2").hide();
+        $("#math2-bad").hide();
 
         var $answer = $("#math2-answer");
         var answer = $answer.val();
 
         if (answer === "math22") {
           $("#math2-text").text("WOW! YOU EXIST!");
+ $("#math-2").attr("src", "https://www.freeiconspng.com/thumbs/checkmark-png/checkmark-png-5.png");
+ 
         } 
+      
         else {
           $("#math2-text").text("I HEAR EVERY DOOR YOU OPEN!");
+          $("#math2-bad").attr("src", "https://static.vecteezy.com/system/resources/thumbnails/017/785/303/small/creative-wrong-icon-3d-render-png.png");
         }
+        $("#math2-text").fadeIn(500);
+        $("#math2-text").animate({
+          width: "400px",
+          marginLeft: "250px",
+          borderWidth: "300px"
+        }, 1500);
+        $("#math-2").fadeIn(500);
+        $("#math2-bad").fadeIn(500);
       });
 
       //========================Math Question 3 jQuery Code
       $("#math3-form").on("submit", function (event) {
         event.preventDefault();
+        $("#math3-text").hide();
+        $("#math3-bad").hide();
 
         var $answer = $("#math3-answer");
         var answer = $answer.val();
 
         if (answer === "math33") {
           $("#math3-text").text("I HEAR MATH THAT BAD!");
+           $("#math3-bad").attr("src", "https://static.vecteezy.com/system/resources/thumbnails/017/785/303/small/creative-wrong-icon-3d-render-png.png");
         } 
         else {
           $("#math3-text").text("I HEAR MATH THAT BAD!");
+           $("#math3-bad").attr("src", "https://static.vecteezy.com/system/resources/thumbnails/017/785/303/small/creative-wrong-icon-3d-render-png.png");
         }
+         $("#math3-text").fadeIn(500);
+         $("#math3-text").animate({
+          width: "400px",
+          marginLeft: "250px",
+          borderWidth: "300px"
+        }, 1500);
+        $("#math3-bad").fadeIn(500);
       });
 
       
